@@ -1,0 +1,55 @@
+// FOR Device
+###
+GET http://localhost:3000
+###  GET DEVICE ALL
+GET http://localhost:3000/device
+### GET DEVICE BY ID
+GET http://localhost:3000/device/d22e256e-ff3b-4e2e-9802-17808b27f8ae
+
+### ADD DEVICE
+POST http://localhost:3000/device
+Content-Type: application/json
+
+{
+    "name": "Kamar",
+    "description": "Baru",
+    "category": "Switch",
+    "value_string": "",
+    "value_boolean": false,
+    "value_number": 0,
+    "authorEmail" : "ditoy@gmail.com"
+}
+### UPDATE DEVICE
+PUT http://localhost:3000/device/d22e256e-ff3b-4e2e-9802-17808b27f8ae
+Content-Type: application/json
+
+{
+    "value_boolean": true
+}
+### DELETE DEVICE
+DELETE http://localhost:3000/device/d22e256e-ff3b-4e2e-9802-17808b27f8ae
+
+//FOR USER
+### GET USER
+GET http://localhost:3000/user
+### ADD USER
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "name" : "Dimas Thoriq",
+    "email" : "ditoy@gmail.com"
+}
+### GET USER BY ID
+GET http://localhost:3000/user/83a25703-2d91-4600-af31-c7fe57aca221
+### UPDATE DEVICE 
+PUT http://localhost:3000/user/83a25703-2d91-4600-af31-c7fe57aca221
+Content-Type: application/json
+
+{
+    "name" : "Dimas thoriq Raditya Wibowo",
+    "email" : "ditoy@gmail.com"
+}
+
+###DELETE DEVICE
+DELETE http://localhost:3000/user/37bf7981-28a2-4e5f-a04b-6266a0ed905c
